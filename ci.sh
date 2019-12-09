@@ -31,7 +31,13 @@ then
   ./build-normaliz.sh ${GAP_HOME}
 fi
 
-# The next block is borrowed from 
+# for CddInterface
+if [[ -f install.sh ]] && [ $(PKG_NAME) == 'CddInterface' ]
+then
+  ./install.sh ${GAP_HOME}
+fi
+
+# The next block is borrowed from
 # https://github.com/gap-system/gap/blob/master/bin/BuildPackages.sh
 #
 # build this package, if necessary
